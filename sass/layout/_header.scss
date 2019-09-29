@@ -1,0 +1,34 @@
+.header {
+    position: relative;
+    height: 95vh;
+    background-image:
+        linear-gradient(to right bottom,
+            rgba(190, 255, 179, 0.5),
+            rgba(0, 87, 56, 0.5)),
+        url(../image/forest-trees-road.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+}

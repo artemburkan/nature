@@ -1,0 +1,100 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        position: relative;
+        display: inline-block;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &:after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(0);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .3);
+
+    }
+
+
+    &:hover::after {
+        background: transparent;
+        color: black;
+        opacity: 0;
+        transform: scaleX(1.4) scaleY(1.6);
+        transition: all .35s;
+    }
+
+    &_white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        transition: all .1s;
+
+        &:after {
+            background-color: $color-white;
+        }
+    }
+
+    &_green {
+        background-color: $color-primary;
+        color: $color-white;
+        transition: all .1s;
+    }
+
+    &_animated {
+        animation: moveInTop .5s ease-out;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        border-radius: 100px;
+
+        z-index: -1;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        display: inline-block;
+        padding: 3px;
+        color: $color-primary;
+        font-size: $default-font-size;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}
