@@ -9,19 +9,22 @@
 html {
     font-size: 62.5%;
 
-
+    // 1200px
     @include respond(tab-land) {
       font-size: 56.25%;
     }
 
+    // 900 px
     @include respond(tab-port) {
+      font-size: 56.25%;
+    }
+
+    // 600 px
+    @include respond(phone) {
       font-size: 50%;
     }
 
-    @include respond(phone) {
-      font-size: 30%;
-    }
-
+    // 1800+ px
     @include respond(tab-desktop) {
       font-size: 75%;
     }
